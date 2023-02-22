@@ -1,0 +1,296 @@
+commands:
+  - id: 1
+    command: ls
+    tags:
+      - ファイル操作
+      - ディレクトリ操作
+    description: ディレクトリの内容を表示します。
+    recommend: 5
+    favorite: true
+    details: ''
+  - id: 2
+    command: ps
+    tags:
+      - プロセス管理
+    description: 実行中のプロセスの情報を表示します。
+    recommend: 4
+    favorite: true
+    details: ''
+  - id: 3
+    command: grep
+    tags:
+      - ファイル操作
+      - 検索
+    description: 指定されたパターンにマッチする行を検索します。
+    recommend: 3
+    favorite: false
+    details: ''
+  - id: 4
+    command: netstat
+    tags:
+      - ネットワーク
+      - ポート
+    description: ネットワークの状態や接続中のポートを表示します。
+    recommend: 2
+    favorite: false
+    details: ''
+  - id: 5
+    command: df
+    tags:
+      - ディスク管理
+    description: ディスクの使用状況を表示します。
+    recommend: 1
+    favorite: false
+    details: ''
+  - id: 6
+    command: wget
+    tags:
+      - download
+      - network
+    description: >-
+      GNU Wget is a free utility for non-interactive download of files from the
+      Web. It supports HTTP, HTTPS, and FTP protocols, as well as retrieval
+      through HTTP proxies.
+    recommend: 4
+    favorite: true
+    details: |
+      Examples:
+      - Download a single file:
+        wget https://example.com/file.zip
+
+      - Download a file and save it with a different name:
+        wget -O new_file.zip https://example.com/file.zip
+  - id: 7
+    command: xargs
+    tags:
+      - utility
+      - text processing
+    description: xargs reads items from standard input or from a file and executes the command (default is /bin/echo) one or more times with any initial-arguments followed by items read from standard input.
+    recommend: 3
+    favorite: false
+  - id: 8
+    command: scp
+    tags:
+      - file transfer
+      - network
+    description: scp (secure copy) is a command-line utility that allows you to securely copy files and directories between two remote hosts across the network.
+    recommend: 4
+    favorite: true
+    details: |
+      Examples:
+      - Copy a file from remote host to local machine:
+        scp user@remote:/path/to/file.txt /path/to/destination
+
+      - Copy a directory and its contents from local machine to remote host:
+        scp -r /path/to/directory user@remote:/path/to/destination
+  - id: 9
+    command: diff
+    tags:
+      - file comparison
+      - utility
+    description: The diff command is a Unix utility that is used to compare two files line by line, and it is particularly useful for showing the differences between two versions of a file.
+    recommend: 3
+    favorite: false
+    details: ''
+  - id: 10
+    command: sed
+    tags:
+      - text processing
+      - utility
+    description: Sed is a stream editor that is used to perform basic text transformations on an input stream (a file or input from a pipeline). It supports a range of commands for modifying, inserting, and deleting text in a file.
+    recommend: 4
+    favorite: true
+    details: |
+      Examples:
+      - Replace the first occurrence of a string in a file:
+        sed 's/search/replace/' file.txt
+
+      - Replace all occurrences of a string in a file:
+        sed 's/search/replace/g' file.txt
+  - id: 11
+    command: cp
+    tags:
+      - ファイル操作
+    description: ファイルをコピーする
+    recommend: 4
+    favorite: true
+    details: |
+      cpコマンドは、ファイルやディレクトリをコピー するためのコマンドです。
+      cpコマンドの基本的な使い方は、以下の通りです 。
+
+      cp <元ファイルパス> <コピー先パス>
+  - id: 12
+    command: chmod
+    tags:
+      - ファイル操作
+    description: ファイルの権限を変更する
+    recommend: 3
+    favorite: false
+    details: |
+      chmodコマンドは、ファイルやディレクトリのアクセス権を変更するためのコマンドです。
+      chmodコマンドの基本的な使い方は、以下の通りです。
+
+      chmod <変更したい権限> <変更したいファイルパ ス>
+  - id: 13
+    command: whoami
+    tags:
+      - system
+      - ユーザー情報
+    description: 現在ログインしているユーザー名を 表示します。
+    recommend: 4
+    favorite: false
+    details: |
+      whoamiコマンドは、現在ログインしているユーザ ー名を表示するためのコマンドです。
+      ターミナルなどでwhoamiと入力するだけで、ユー ザー名が表示されます。
+      主にシェルスクリプトなどで、現在のユーザー名 を取得するために利用されます。
+  - id: 14
+    command: curl
+    tags:
+      - ネットワーク
+    description: URLからデータをダウンロードする
+    recommend: 4
+    favorite: true
+    details: |
+      curlコマンドは、URLからデータをダウンロードするためのコマンドです。
+      curlコマンドの基本的な使い方は、以下の通りで す。
+
+      curl <URL>
+  - id: 15
+    command: top
+    tags:
+      - system
+      - プロセス管理
+    description: システム上で動作中のプロセスを表 示します。
+    recommend: 5
+    favorite: true
+    details: |
+      topコマンドは、Linuxシステム上で実行されてい るプロセスをリアルタイムで監視するためのコマンドで す。
+      実行すると、CPUやメモリの使用状況が表示されます。
+      プロセスをキルするための機能も備えており、シ ステム管理者にとっては非常に便利なコマンドです。
+  - id: 16
+    command: ifconfig
+    tags:
+      - networking
+    description: display and manipulate network interface parameters
+    recommend: 4
+    favorite: true
+    details: |
+      The ifconfig command is used to configure network interfaces and display
+      information about them. With ifconfig, you can assign an IP address to an
+      interface, bring an interface up or down, and get information about packet
+      statistics and errors.
+  - id: 17
+    command: traceroute
+    tags:
+      - networking
+      - internet
+    description: print the route packets take to network host
+    recommend: 3
+    favorite: false
+    details: |
+      The traceroute command is used to trace the route taken by packets of data
+      as they travel across an Internet Protocol (IP) network. It shows the path
+      that network packets take from the source to the destination, and it also
+      displays information about the time taken for the packets to reach each
+      hop along the way.
+  - id: 18
+    command: sudo
+    tags:
+      - security
+      - permission
+    description: execute a command as another user
+    recommend: 5
+    favorite: true
+    details: |
+      The sudo command is used to execute a command as another user, usually the
+      root user. It is commonly used to perform administrative tasks that
+      require elevated privileges. With sudo, you can run commands that you
+      wouldn't normally be able to run as a regular user.
+  - id: 19
+    command: nc
+    tags:
+      - networking
+      - server
+    description: arbitrary TCP and UDP connections and listens
+    recommend: 4
+    favorite: false
+    details: |
+      The nc (or netcat) command is used to create arbitrary TCP and UDP
+      connections and listens. It can be used to send and receive data across a
+      network, as well as to create backdoors and perform other types of
+      network-related tasks.
+  - id: 20
+    command: ping
+    tags:
+      - network
+      - troubleshooting
+    description: send ICMP ECHO_REQUEST to network hosts
+    recommend: 3
+    favorite: true
+    details: |
+      The ping command is a command to check the network connection status for
+      computers and communication devices on the IP network. Normally, operation
+      is checked by sending an ICMP echo request message to the specified IP
+      address or host name and receiving a response to it.
+  - id: 21
+    command: cat
+    tags:
+      - ファイル操作
+      - テキスト操作
+    description: ファイルの中身を表示するコマンドです。
+    recommend: 4
+    favorite: true
+    details: |
+      cat [ファイル名]
+
+      ファイルの中身を表示します。
+      ファイル名を指定しない場合は、標準入力からデ ータを読み取ります。
+  - id: 22
+    command: unzip
+    tags:
+      - 圧縮・解凍
+      - ファイル操作
+    description: 圧縮されたファイルを解凍するコマンドです。
+    recommend: 3
+    favorite: false
+    details: ''
+  - id: 23
+    command: uname
+    tags:
+      - システム情報
+    description: カーネルバージョンやOS名を表示するコマンドです。
+    recommend: 3
+    favorite: false
+    details: |
+      uname [-amnrsv] [--help] [--version]
+
+      -a, --all：すべての情報を表示
+      -m, --machine：ハードウェア情報を表示
+      -n, --nodename：ノード名を表示
+      -r, --kernel-release：カーネルのリリース番号 を表示
+      -s, --kernel-name：カーネル名を表示
+      -v, --kernel-version：カーネルのバージョンを 表示
+  - id: 24
+    command: free
+    tags:
+      - メモリ
+    description: メモリの使用量を表示するコマンドです。
+    recommend: 2
+    favorite: false
+    details: ''
+  - id: 25
+    command: du
+    tags:
+      - ファイルサイズ
+      - ディスク使用量
+    description: ファイルやディレクトリのディスク使用量を調べるコマンドです。
+    recommend: 2
+    favorite: false
+    details: |
+      du [-ahd] [--help] [--version] [ファイルまた はディレクトリ]
+
+      -a, --all：全てのファイルを表示
+      -h, --human-readable：サイズを読みやすい単位 で表示
+      -d, --max-depth=<N>：指定した深さまでのディレクトリを表示
+      --help：ヘルプを表示
+      --version：バージョンを表示
